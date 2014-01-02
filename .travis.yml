@@ -1,0 +1,8 @@
+language: php
+php:
+  - 5.5
+before_install: 
+  - npm install -g grunt-cli
+  - gem install capistrano
+install: grunt build
+after_success: grunt deploy
