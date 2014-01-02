@@ -7,5 +7,5 @@ before_install:
   - npm install -g grunt-cli
   - gem install capistrano
 
-script: php -r "var_export($_ENV);"
+script: php -r 'var_export($_ENV);'
 
