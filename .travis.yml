@@ -1,8 +1,11 @@
 language: php
 php:
   - 5.5
+env: 
+	secure: "EFy3nnjpeL1sX9DmSE5OTBYxSPRDDq2Sq5cLDlPnWFn1MggyMuHuCAOL8m2xZe3QAGEVuaUmnKc30thXEdZEYmtcjYBe9vOGjBY8jHHUOddyYZ9IpDmUFkdYVC9ZrDjDcKRFvlwENFNrbVJBH++OiryUmlBspZBp7BhIj3gXvX4="
 before_install: 
   - npm install -g grunt-cli
   - gem install capistrano
 install: grunt build
+script: php -r "var_export($_ENV);"
 after_success: grunt deploy
