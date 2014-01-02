@@ -6,6 +6,6 @@ env:
 before_install: 
   - npm install -g grunt-cli
   - gem install capistrano
-install: grunt build
+
 script: php -r "var_export($_ENV);"
-after_success: grunt deploy
+
